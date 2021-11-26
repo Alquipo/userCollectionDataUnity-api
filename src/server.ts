@@ -2,19 +2,16 @@ import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 
-import router from './routes/user.routes';
+import reportRouter from './routes/report.routes';
+import userRouter from './routes/user.routes';
 
 dotenv.config();
 const app = express();
 
 // middlewares
 app.use(express.json());
-app.use('/api', router);
-
-// routes
-app.get('/', (req, res) => {
-  return res.json('Hello World!');
-});
+app.use('/api', userRouter);
+app.use('/api/download', reportRouter);
 
 // mongodb connection
 mongoose
