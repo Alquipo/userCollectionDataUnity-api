@@ -2,7 +2,7 @@ import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
 
-import router from './routes/user';
+import router from './routes/user.routes';
 
 dotenv.config();
 const app = express();
@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
 // mongodb connection
 mongoose
   .connect(process.env.MONGODB_URI)
-  .then(() => console.log('connect to mongo db atlas'))
+  .then(() => console.log('Connect to mongo db atlas'))
   .catch((err) => console.log(err));
 
 // server execute
