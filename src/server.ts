@@ -23,4 +23,4 @@ mongoose
   .catch((err) => console.log(err));
 
 // server execute
-app.listen(3333, () => console.log('Server is running!'));
+app.listen(process.env.PORT || 3333, () => console.log('Server is running!'));
