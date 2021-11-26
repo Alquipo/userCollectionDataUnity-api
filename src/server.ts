@@ -22,4 +22,5 @@ mongoose
   .then(() => console.log('connect to mongo db atlas'))
   .catch((err) => console.log(err));
 
+// server execute
 app.listen(3333, () => console.log('Server is running!'));

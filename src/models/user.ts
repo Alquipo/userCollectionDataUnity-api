@@ -1,6 +1,6 @@
-import { Document, Schema, model } from 'mongoose';
+import mongoose from 'mongoose';
 
-export interface IUser extends Document {
+export interface IUser extends mongoose.Document {
   nickname: string;
   scene: number;
   q1?: Array<string>;
@@ -10,7 +10,7 @@ export interface IUser extends Document {
   q5?: Array<string>;
 }
 
-export const userSchema = new Schema({
+export const UserSchema = new mongoose.Schema({
   nickname: {
     type: String,
     required: true
@@ -39,8 +39,7 @@ export const userSchema = new Schema({
     type: Array,
     required: false
   }
-  // createdAt: { type: Date, default: Date.now },
-  // updateAt: { type: Date, default: Date.now }
 });
 
-export default model<IUser>('User', userSchema);
+const UserModel = mongoose.model<IUser>('User', UserSchema);
+export default UserModel;
