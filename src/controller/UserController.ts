@@ -68,19 +68,23 @@ class UserController {
       const { id } = req.params;
       const { scene, q1, q2, q3, q4, q5 } = req.body;
 
-      const user = await UserModel.findByIdAndUpdate(id, {
-        scene,
-        q1,
-        q2,
-        q3,
-        q4,
-        q5
-      });
+      const user = await UserModel.findByIdAndUpdate(
+        id,
+        {
+          scene,
+          q1,
+          q2,
+          q3,
+          q4,
+          q5
+        },
+        { new: true }
+      );
 
-      res.json(user);
+      return res.json(user);
     } catch (err) {
-      res.status(400).json({ message: err });
       console.log('Error Get user', err);
+      return res.status(400).json({ message: err });
     }
   };
 
@@ -88,20 +92,22 @@ class UserController {
     try {
       const { id } = req.params;
       const user = await UserModel.findByIdAndRemove(id);
-      res.json(user);
+
+      return res.json(user);
     } catch (err) {
-      res.status(400).json({ message: err });
       console.log('Error Get user', err);
+      return res.status(400).json({ message: err });
     }
   };
 
   deleteAllUsers = async (req: Request, res: Response) => {
     try {
       const user = await UserModel.remove();
-      res.json(user);
+
+      return res.json(user);
     } catch (err) {
-      res.status(400).json({ message: err });
       console.log('Error Get user', err);
+      return res.status(400).json({ message: err });
     }
   };
 }
