@@ -4,7 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts"
+    "start": "node dist/src/server.js",
+    "build": "tsc --build tsconfig.json",
+    "dev": "ts-node-dev --transpile-only --ignore-watch node_modules --respawn src/server.ts",
+    "postinstall": "npm run build"
   },
   "dependencies": {
     "dotenv": "^10.0.0",
