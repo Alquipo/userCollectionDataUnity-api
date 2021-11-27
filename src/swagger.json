@@ -110,6 +110,174 @@
           }
         }
       }
+    },
+    "/api/users/{id}": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Update a user",
+        "description": "Update a user",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "scene": {
+                    "type": "number"
+                  },
+                  "q1": {
+                    "type": "array"
+                  },
+                  "q2": {
+                    "type": "array"
+                  },
+                  "q3": {
+                    "type": "array"
+                  },
+                  "q4": {
+                    "type": "array"
+                  },
+                  "q5": {
+                    "type": "array"
+                  }
+                },
+                "example": {
+                  "scene": 15,
+                  "q1": [
+                    "resposta 1",
+                    "resposta 2",
+                    "resposta 3",
+                    "resposta 4",
+                    "resposta 5",
+                    "resposta 6",
+                    "resposta 7",
+                    "resposta 8",
+                    "resposta 9",
+                    "resposta 10"
+                  ],
+                  "q2": [
+                    "resposta 1",
+                    "resposta 2",
+                    "resposta 3",
+                    "resposta 4",
+                    "resposta 5",
+                    "resposta 6",
+                    "resposta 7",
+                    "resposta 8",
+                    "resposta 9",
+                    "resposta 10"
+                  ],
+                  "q3": [
+                    "resposta 1",
+                    "resposta 2",
+                    "resposta 3",
+                    "resposta 4",
+                    "resposta 5",
+                    "resposta 6",
+                    "resposta 7",
+                    "resposta 8",
+                    "resposta 9",
+                    "resposta 10"
+                  ],
+                  "q4": [
+                    "resposta 1",
+                    "resposta 2",
+                    "resposta 3",
+                    "resposta 4",
+                    "resposta 5",
+                    "resposta 6",
+                    "resposta 7",
+                    "resposta 8",
+                    "resposta 9",
+                    "resposta 10"
+                  ],
+                  "q5": []
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User Updated"
+          },
+          "400": {
+            "description": "Error updated user"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "List a user",
+        "description": "List a user",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "properties": {
+                    "_id": {
+                      "type": "string"
+                    },
+                    "nickname": {
+                      "type": "string"
+                    },
+                    "scene": {
+                      "type": "number"
+                    },
+                    "q1": {
+                      "type": "array"
+                    },
+                    "q2": {
+                      "type": "array"
+                    },
+                    "q3": {
+                      "type": "array"
+                    },
+                    "q4": {
+                      "type": "array"
+                    },
+                    "q5": {
+                      "type": "array"
+                    },
+                    "__v": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
     }
   }
 }
