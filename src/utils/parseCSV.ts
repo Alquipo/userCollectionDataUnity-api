@@ -3,7 +3,7 @@ import { Parser } from 'json2csv';
 
 import { IUser } from '../models/user';
 
-export const downloadResource = (
+export const downloadCSV = (
   res: Response,
   fileName: string,
   fields,

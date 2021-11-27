@@ -16,7 +16,7 @@ class UserController {
           nickname: req.body.nickname
         });
 
-        return res.status(400).send({
+        return res.status(403).send({
           message: 'User already exists',
           userData: { _id, nickname, scene }
         });

@@ -1,3 +1,4 @@
+import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
@@ -9,9 +10,14 @@ dotenv.config();
 const app = express();
 
 // middlewares
+app.use(cors());
 app.use(express.json());
 app.use('/api', userRouter);
 app.use('/api/download', reportRouter);
+
+app.get('/', (req, res) => {
+  return res.send({ version: '2.0.0' });
+});
 
 // mongodb connection
 mongoose

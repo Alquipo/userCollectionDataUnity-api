@@ -1,7 +1,7 @@
 import { Request, Response } from 'express';
 
 import UserModel from '../models/user';
-import { downloadResource } from '../utils/parseCSV';
+import { downloadCSV } from '../utils/parseCSV';
 
 class ReportController {
   downloadCSV = async (req: Request, res: Response) => {
@@ -34,7 +34,7 @@ class ReportController {
         }
       ];
 
-      return downloadResource(res, 'reportUsers.csv', fields, users);
+      return downloadCSV(res, 'reportUsers.csv', fields, users);
     } catch (err) {
       console.log('Error generate CSV', err);
       return res.status(400).json({ message: err });
