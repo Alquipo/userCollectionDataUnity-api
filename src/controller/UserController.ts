@@ -81,9 +81,9 @@ class UserController {
         { new: true }
       );
 
-      return res.json(user);
+      return res.status(200).json(user);
     } catch (err) {
-      console.log('Error Get user', err);
+      console.log('Error updated user', err);
       return res.status(400).json({ message: err });
     }
   };

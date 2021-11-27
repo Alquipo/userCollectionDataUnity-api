@@ -2,9 +2,11 @@ import cors from 'cors';
 import dotenv from 'dotenv';
 import express from 'express';
 import mongoose from 'mongoose';
+import swaggerUi from 'swagger-ui-express';
 
 import reportRouter from './routes/report.routes';
 import userRouter from './routes/user.routes';
+import swaggerDocument from './swagger.json';
 
 dotenv.config();
 const app = express();
@@ -12,12 +14,11 @@ const app = express();
 // middlewares
 app.use(cors());
 app.use(express.json());
+
+// Routes
 app.use('/api', userRouter);
 app.use('/api/download', reportRouter);
-
-app.get('/', (req, res) => {
-  return res.send({ version: '2.0.0' });
-});
+app.use('/', swaggerUi.serve, swaggerUi.setup(swaggerDocument));
 
 // mongodb connection
 mongoose

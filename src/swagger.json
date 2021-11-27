@@ -1,0 +1,283 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Watershed Explorers Documentation",
+    "description": "This is an API Watershed Explorers",
+    "version": "3.0.0",
+    "contact": {
+      "name": "Alquipo Neto",
+      "url": "https://github.com/Alquipo"
+    }
+  },
+  "paths": {
+    "/api/users": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Create a new user",
+        "description": "Create a new user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nickname": {
+                    "type": "string"
+                  },
+                  "scene": {
+                    "type": "number"
+                  },
+                  "q1": {
+                    "type": "array"
+                  },
+                  "q2": {
+                    "type": "array"
+                  },
+                  "q3": {
+                    "type": "array"
+                  },
+                  "q4": {
+                    "type": "array"
+                  },
+                  "q5": {
+                    "type": "array"
+                  }
+                },
+                "example": {
+                  "nickname": "nickName sample",
+                  "scene": 10
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User created"
+          },
+          "403": {
+            "description": "User already exists"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "List all users",
+        "description": "List all users",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "properties": {
+                    "_id": {
+                      "type": "string"
+                    },
+                    "nickname": {
+                      "type": "string"
+                    },
+                    "scene": {
+                      "type": "number"
+                    },
+                    "q1": {
+                      "type": "array"
+                    },
+                    "q2": {
+                      "type": "array"
+                    },
+                    "q3": {
+                      "type": "array"
+                    },
+                    "q4": {
+                      "type": "array"
+                    },
+                    "q5": {
+                      "type": "array"
+                    },
+                    "__v": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/users/{id}": {
+      "put": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Update a user",
+        "description": "Update a user",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "scene": {
+                    "type": "number"
+                  },
+                  "q1": {
+                    "type": "array"
+                  },
+                  "q2": {
+                    "type": "array"
+                  },
+                  "q3": {
+                    "type": "array"
+                  },
+                  "q4": {
+                    "type": "array"
+                  },
+                  "q5": {
+                    "type": "array"
+                  }
+                },
+                "example": {
+                  "scene": 15,
+                  "q1": [
+                    "resposta 1",
+                    "resposta 2",
+                    "resposta 3",
+                    "resposta 4",
+                    "resposta 5",
+                    "resposta 6",
+                    "resposta 7",
+                    "resposta 8",
+                    "resposta 9",
+                    "resposta 10"
+                  ],
+                  "q2": [
+                    "resposta 1",
+                    "resposta 2",
+                    "resposta 3",
+                    "resposta 4",
+                    "resposta 5",
+                    "resposta 6",
+                    "resposta 7",
+                    "resposta 8",
+                    "resposta 9",
+                    "resposta 10"
+                  ],
+                  "q3": [
+                    "resposta 1",
+                    "resposta 2",
+                    "resposta 3",
+                    "resposta 4",
+                    "resposta 5",
+                    "resposta 6",
+                    "resposta 7",
+                    "resposta 8",
+                    "resposta 9",
+                    "resposta 10"
+                  ],
+                  "q4": [
+                    "resposta 1",
+                    "resposta 2",
+                    "resposta 3",
+                    "resposta 4",
+                    "resposta 5",
+                    "resposta 6",
+                    "resposta 7",
+                    "resposta 8",
+                    "resposta 9",
+                    "resposta 10"
+                  ],
+                  "q5": []
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "User Updated"
+          },
+          "400": {
+            "description": "Error updated user"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "User"
+        ],
+        "summary": "List a user",
+        "description": "List a user",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "properties": {
+                    "_id": {
+                      "type": "string"
+                    },
+                    "nickname": {
+                      "type": "string"
+                    },
+                    "scene": {
+                      "type": "number"
+                    },
+                    "q1": {
+                      "type": "array"
+                    },
+                    "q2": {
+                      "type": "array"
+                    },
+                    "q3": {
+                      "type": "array"
+                    },
+                    "q4": {
+                      "type": "array"
+                    },
+                    "q5": {
+                      "type": "array"
+                    },
+                    "__v": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
