@@ -37,6 +37,7 @@
     "no-useless-constructor": "off",
     "no-empty-function": "off",
     "lines-between-class-members": "off",
+    "no-plusplus": 0,
     "@typescript-eslint/naming-convention": [
       "error",
       {

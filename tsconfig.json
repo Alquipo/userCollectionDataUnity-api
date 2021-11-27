@@ -3,10 +3,9 @@
     "target": "es2016",
     "module": "commonjs",
     "rootDir": "./",
-    "baseUrl": "./src",
     "outDir": "./dist",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "skipLibCheck": true
+    "skipLibCheck": true,
   }
 }
