@@ -4,6 +4,6 @@ import ReportController from '../controller/ReportController';
 
 const reportRouter = Router();
 
-reportRouter.get('/reportCSV', ReportController.downloadCSV);
+reportRouter.get('/userReport', ReportController.downloadCSV);
 
 export default reportRouter;
