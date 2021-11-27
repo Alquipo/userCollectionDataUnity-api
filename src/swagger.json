@@ -1,0 +1,115 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Watershed Explorers Documentation",
+    "description": "This is an API Watershed Explorers",
+    "version": "3.0.0",
+    "contact": {
+      "name": "Alquipo Neto",
+      "url": "https://github.com/Alquipo"
+    }
+  },
+  "paths": {
+    "/api/users": {
+      "post": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Create a new user",
+        "description": "Create a new user",
+        "requestBody": {
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "nickname": {
+                    "type": "string"
+                  },
+                  "scene": {
+                    "type": "number"
+                  },
+                  "q1": {
+                    "type": "array"
+                  },
+                  "q2": {
+                    "type": "array"
+                  },
+                  "q3": {
+                    "type": "array"
+                  },
+                  "q4": {
+                    "type": "array"
+                  },
+                  "q5": {
+                    "type": "array"
+                  }
+                },
+                "example": {
+                  "nickname": "nickName sample",
+                  "scene": 10
+                }
+              }
+            }
+          }
+        },
+        "responses": {
+          "201": {
+            "description": "User created"
+          },
+          "403": {
+            "description": "User already exists"
+          }
+        }
+      },
+      "get": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "List all users",
+        "description": "List all users",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "properties": {
+                    "_id": {
+                      "type": "string"
+                    },
+                    "nickname": {
+                      "type": "string"
+                    },
+                    "scene": {
+                      "type": "number"
+                    },
+                    "q1": {
+                      "type": "array"
+                    },
+                    "q2": {
+                      "type": "array"
+                    },
+                    "q3": {
+                      "type": "array"
+                    },
+                    "q4": {
+                      "type": "array"
+                    },
+                    "q5": {
+                      "type": "array"
+                    },
+                    "__v": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
