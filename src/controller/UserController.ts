@@ -16,10 +16,12 @@ class UserController {
           nickname: req.body.nickname
         });
 
-        return res.status(403).send({
-          message: 'User already exists',
-          userData: { _id, nickname, scene }
-        });
+        // return res.status(403).send({
+        //   message: 'User already exists',
+        //   userData: { _id, nickname, scene }
+        // });
+
+        return res.status(403).send({ _id, nickname, scene });
       }
 
       await user.save();
