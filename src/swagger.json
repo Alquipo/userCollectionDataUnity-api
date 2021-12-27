@@ -1,8 +1,8 @@
 {
   "openapi": "3.0.0",
   "info": {
-    "title": "Watershed Explorers Documentation",
-    "description": "This is an API Watershed Explorers",
+    "title": "User Collection Data Unity Documentation",
+    "description": "This is an API used to store user data and survey, generating a CSV report",
     "version": "3.0.0",
     "contact": {
       "name": "Alquipo Neto",
@@ -101,6 +101,30 @@
                       "type": "array"
                     },
                     "__v": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "Users"
+        ],
+        "summary": "Delete all users",
+        "description": "Delete all users",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "deletedCount": {
                       "type": "number"
                     }
                   }
@@ -216,6 +240,21 @@
           },
           "400": {
             "description": "Error updated user"
+          },
+          "404": {
+            "description": "No user found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       },
@@ -271,6 +310,122 @@
                     "__v": {
                       "type": "number"
                     }
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "delete": {
+        "tags": [
+          "User"
+        ],
+        "summary": "Delete a user",
+        "description": "Delete a user",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "description": "User id",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "properties": {
+                    "_id": {
+                      "type": "string"
+                    },
+                    "nickname": {
+                      "type": "string"
+                    },
+                    "scene": {
+                      "type": "number"
+                    },
+                    "q1": {
+                      "type": "array"
+                    },
+                    "q2": {
+                      "type": "array"
+                    },
+                    "q3": {
+                      "type": "array"
+                    },
+                    "q4": {
+                      "type": "array"
+                    },
+                    "q5": {
+                      "type": "array"
+                    },
+                    "__v": {
+                      "type": "number"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "Bad Request",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "object"
+                    }
+                  }
+                }
+              }
+            }
+          },
+          "404": {
+            "description": "No user found",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "message": {
+                      "type": "string"
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/api/download/userReport": {
+      "get": {
+        "tags": [
+          "Report"
+        ],
+        "summary": "Download users report",
+        "description": "Download users report",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "content": {
+              "text/csv": {
+                "schema": {
+                  "type": "string"
+                },
+                "examples": {
+                  "csv_table": {
+                    "summary": "A CSV table with 7 cells",
+                    "value": "Nickname,Scene,Quiz 1,Quiz 2,Quiz 3,Quiz 4,Quiz 5"
                   }
                 }
               }

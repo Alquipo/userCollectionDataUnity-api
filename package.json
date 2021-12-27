@@ -1,8 +1,10 @@
 {
-  "name": "watershedexplorers-api",
-  "version": "1.0.0",
+  "name": "user-collection-data-unity-api",
+  "description": "This is an API used to store user data and survey, generating a CSV report",
+  "version": "3.0.0",
   "main": "index.js",
   "license": "MIT",
+  "author": "Alquipo <alquiponeto@outlook.com.br>",
   "scripts": {
     "start": "node dist/src/server.js",
     "build": "tsc --build tsconfig.json",
@@ -35,6 +37,5 @@
     "prettier": "^2.5.0",
     "ts-node-dev": "^1.1.8",
     "typescript": "^4.5.2"
-  },
-  "author": "Alquipo <alquiponeto@outlook.com.br>"
+  }
 }
