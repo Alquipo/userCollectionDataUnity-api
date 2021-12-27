@@ -53,7 +53,7 @@ class UserController {
       const user = await UserModel.findById(id);
 
       if (!user) {
-        return res.status(404).json({ message: 'No users found' });
+        return res.status(404).json({ message: 'No user found' });
       }
 
       return res.json(user);
