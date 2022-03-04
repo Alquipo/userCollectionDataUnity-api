@@ -27,4 +27,6 @@ mongoose
   .catch((err) => console.log(err));
 
 // server execute
-app.listen(process.env.PORT || 3333, () => console.log('Server is running!'));
+app.listen(process.env.PORT || 3333, () =>
+  console.log('Server is running! access http://localhost:3333')
+);
