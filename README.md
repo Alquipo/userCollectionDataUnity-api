@@ -133,10 +133,10 @@ $ cd userCollectionDataUnity-api
 ```bash
 
 # Instale as dependências
-$ yarn install
+$ npm install
 
 # Execute a Aplicação em Desenvolvimento
-$ yarn dev
+$ npm run dev
 
 # O servidor iniciará na porta:3333 - acesse http://localhost:3333
 
@@ -146,10 +146,10 @@ $ yarn dev
 
 ```bash
 #Gerar a build da aplicação
-$ yarn build
+$ npm run build
 
 #Executar a build da aplicação
-$ yarn start
+$ npm run start
 
 ```
 
