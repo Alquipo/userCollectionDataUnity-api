@@ -68,7 +68,7 @@ class UserController {
   updateUser = async (req: Request, res: Response) => {
     try {
       const { id } = req.params;
-      const { scene, q1, q2, q3, q4, q5 } = req.body;
+      const { scene, q1, q2, q3, q4, q5, q6, q7 } = req.body;
 
       const user = await UserModel.findByIdAndUpdate(
         id,
@@ -78,7 +78,9 @@ class UserController {
           q2,
           q3,
           q4,
-          q5
+          q5,
+          q6,
+          q7
         },
         { new: true }
       );

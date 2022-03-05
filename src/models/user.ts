@@ -8,6 +8,8 @@ export interface IUser extends mongoose.Document {
   q3?: Array<string>;
   q4?: Array<string>;
   q5?: Array<string>;
+  q6?: Array<string>;
+  q7?: Array<string>;
 }
 
 export const UserSchema = new mongoose.Schema({
@@ -36,6 +38,14 @@ export const UserSchema = new mongoose.Schema({
     required: false
   },
   q5: {
+    type: Array,
+    required: false
+  },
+  q6: {
+    type: Array,
+    required: false
+  },
+  q7: {
     type: Array,
     required: false
   }
