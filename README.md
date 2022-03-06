@@ -50,7 +50,7 @@
 
 </p>
 
-## 🚀 Sobre o Projeto
+## 🚀 Overview
 
 
 
@@ -99,7 +99,7 @@ d
 
 <br/> -->
 
-## 🔨 Tecnologias:
+## 🔨 Technologies:
 
 - **[TypeScript](https://www.typescriptlang.org/)**
 - **[NodeJS](https://nodejs.org/en)**
@@ -108,17 +108,17 @@ d
 - **[MongoDB](https://www.mongodb.com/)**
 
 
-## 🔎 Comandos
+## 🔎 Commands
 
-- `dev`: Inicia um servidor como ambiente de dev `localhost:3333`
-- `build`: Cria a Build do projeto
-- `start`: Inicia um servidor simples com o código de produção
+- `dev`: Starts a server as a dev environment `localhost:3333`
+- `build`: Creates the project build
+- `start`: Starts a simple server with the production code
 
-## 🚀 Como rodar este projeto
+## 🚀 How to run this projec
 
-Para clonar e executar este aplicativo, você precisará de [Git](https://git-scm.com), [NodeJs](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/) Instalado em seu computador.
+To clone and execute this application, you will need [Git](https://git-scm.com), [NodeJs](https://nodejs.org/en/), [Yarn](https://yarnpkg.com/) installed in your computer.
 
-### 🌀 Clonando o repositório
+### 🌀 Cloning the repository
 
 ```bash
 # Clone este repositório
@@ -128,7 +128,7 @@ $ git clone https://github.com/Alquipo/userCollectionDataUnity-api
 $ cd userCollectionDataUnity-api
 ```
 
-### 🎲 Rodando a Aplicação
+### 🎲 Running the App
 
 ```bash
 
@@ -142,7 +142,7 @@ $ npm run dev
 
 ```
 
-### 💾 Comandos Úteis
+### 💾 Useful Commands
 
 ```bash
 #Gerar a build da aplicação
@@ -153,7 +153,7 @@ $ npm run start
 
 ```
 
-### 📁 Configuração .ENV
+### 📁  .ENV  Settings
 
 ```bash
 #adicionado .env.example no projeto, lembrar de adicionar as variáveis de ambiente conforme o exemplo
@@ -164,17 +164,19 @@ MONGODB_URI=mongodb+srv://<Username>:<Password>@cluster0.sv24h.mongodb.net/<Data
 
 ```
 
-## 🤔 Como contribuir para o projeto
+## 🤔 How to contribute to this project
 
-- Faça um **fork** do projeto;
-- Crie uma nova branch com as suas alterações: `git checkout -b my-feature`
-- Salve as alterações e crie uma mensagem de commit contando o que você fez:`git commit -m "feature: My new feature"`
-- Envie as suas alterações: `git push origin my-feature`
+- Copy **fork** this project;
+- Create a new branch with your modifications: `git checkout -b my-feature`
+- Save the changes and create a commit message describing what you did/improved: `git commit -m "feature: My new feature"`
+- Send your modifications: `git push origin my-feature`
 
-> Caso tenha alguma dúvida confira este [guia de como contribuir no GitHub](https://github.com/firstcontributions/first-contributions)
+> If you have any questions, check this tutorial out [how to contribute in GitHub](https://github.com/firstcontributions/first-contributions)
 
-## 📝 Licença
+## 📝 License
 
-Este projeto esta sobe a licença MIT. Veja a [LICENÇA](https://opensource.org/licenses/MIT) para saber mais.
+This project had an MIT license. See the [LICENSE](https://opensource.org/licenses/MIT) to learn more about it.
 
-Feito com ❤️ por Alquipo Neto 👋🏽 [Entre em contato!](https://www.linkedin.com/in/alquiponeto/)
+Made with ❤️ by Alquipo Neto 👋🏽 [Get in touch!](https://www.linkedin.com/in/alquiponeto/)
+
+Translated by Robson Junior from the Lehigh RiVR Immersive Learning group.
