@@ -3,7 +3,7 @@
 </p>
 
 <h1 align="center">
- User Collection Data Unity API
+ User Data Collection in Unity API
 </h1>
 
 <p align="center">
